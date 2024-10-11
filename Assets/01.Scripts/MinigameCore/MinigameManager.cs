@@ -14,6 +14,11 @@ public class MinigameManager : MonoSingleton<MinigameManager>
         {
             _minigameContentContainer.Enqueue(game);
         }
+
+        _currentMinigame = Instantiate(_minigameContentContainer.Dequeue(), transform);
+
+        _currentMinigame.Setup();
+        _currentMinigame.StartMinigame();
     }
 
     public void CreateNextMinigame()
