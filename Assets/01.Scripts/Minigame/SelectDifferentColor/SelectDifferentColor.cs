@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SelectDifferentColor : MinigameContent
@@ -23,11 +24,6 @@ public class SelectDifferentColor : MinigameContent
 
         var rand = _colorObjectArr[Random.Range(0, _colorObjectArr.Length)];
         rand.color = _targetColor;
-        // ¿©±â¿¡ AddComponent
-    }
-
-    public override void Update()
-    {
-
+        rand.AddComponent<DifferentColorUnit>();
     }
 }

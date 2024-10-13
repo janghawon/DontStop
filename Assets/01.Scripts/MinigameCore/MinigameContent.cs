@@ -12,7 +12,4 @@ public abstract class MinigameContent : MonoBehaviour
 
     // 게임 시작
     public abstract void StartMinigame();
-
-    // 업데이트
-    public abstract void Update();
 }
