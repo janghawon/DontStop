@@ -108,4 +108,9 @@ public class UIManager : MonoSingleton<UIManager>
     {
         uiObject.transform.DOScale(scaleValue, scaleTime);
     }
+
+    public void OnScalingProduction(UIObject uiObject, Vector2 scaleValue = new Vector2(), float scaleTime = 0.2f)
+    {
+        uiObject.transform.DOScale(scaleValue, scaleTime);
+    }
 }

@@ -58,4 +58,9 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         _audioSources[SoundType.Sfx].PlayOneShot(clip, _audioSources[SoundType.Sfx].volume);
     }
+
+    public AudioSource GetAudioSource(SoundType type)
+    {
+        return _audioSources[type];
+    }
 }
